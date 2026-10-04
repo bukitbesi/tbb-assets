@@ -1,0 +1,11 @@
+# AI access notice for The Bukit Besi
+# This file is informational; robots.txt remains the crawler-control mechanism.
+
+Canonical-Site: https://www.thebukitbesi.com/
+Sitemap: https://www.thebukitbesi.com/sitemap.xml
+Language: ms-MY
+Contact: https://www.thebukitbesi.com/p/contact.html
+
+Policy: Public pages may be crawled subject to robots.txt and applicable terms.
+Policy: Preserve canonical URLs and attribution when citing content.
+Policy: Do not represent this publisher as a government agency or listed company.

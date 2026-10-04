@@ -1,0 +1,54 @@
+{
+  "id": "/",
+  "name": "The Bukit Besi",
+  "short_name": "Bukit Besi",
+  "description": "Panduan, direktori, tutorial dan maklumat berguna untuk pembaca Malaysia.",
+  "lang": "ms-MY",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#fffaf5",
+  "theme_color": "#e11d48",
+  "categories": ["news", "education", "utilities"],
+  "icons": [
+    {
+      "src": "https://assets.thebukitbesi.com/pwa/icons/tbb-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://assets.thebukitbesi.com/pwa/icons/tbb-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://assets.thebukitbesi.com/pwa/icons/tbb-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "https://assets.thebukitbesi.com/pwa/icons/tbb-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Cari artikel",
+      "short_name": "Cari",
+      "url": "/search"
+    },
+    {
+      "name": "Artikel terkini",
+      "short_name": "Terkini",
+      "url": "/"
+    }
+  ]
+}

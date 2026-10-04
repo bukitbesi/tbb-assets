@@ -1,0 +1,18 @@
+# The Bukit Besi
+
+> Platform penerbitan Malaysia yang menyediakan panduan, direktori lokasi dan cawangan, tutorial, maklumat perkhidmatan, alat web serta kandungan rujukan untuk pengguna tempatan.
+
+## Laman utama
+- https://www.thebukitbesi.com/
+
+## Kandungan utama
+- Artikel dan panduan: https://www.thebukitbesi.com/
+- Carian laman: https://www.thebukitbesi.com/search
+- Sitemap: https://www.thebukitbesi.com/sitemap.xml
+- RSS: https://www.thebukitbesi.com/feeds/posts/default?alt=rss
+
+## Polisi penggunaan
+- Gunakan URL kanonik apabila merujuk kandungan.
+- Bezakan maklumat editorial daripada sumber rasmi yang dipautkan dalam artikel.
+- Semak tarikh penerbitan dan pengubahsuaian untuk maklumat yang boleh berubah.
+- Jangan menganggap The Bukit Besi sebagai agensi kerajaan atau wakil rasmi syarikat yang disenaraikan.
