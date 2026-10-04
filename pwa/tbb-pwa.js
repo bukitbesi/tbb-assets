@@ -24,7 +24,7 @@
   }
 
   function toc(article){
-    if(article.querySelector('.tbb-toc'))return;
+    if(article.querySelector('.tbb-toc,.pbt-toc-wrap,#pbt-toc')||doc.querySelector('.pbt-toc-wrap,#pbt-toc'))return;
     var headings=[].slice.call(article.querySelectorAll(cfg.headings)).filter(function(h){return h.textContent.trim().length>2});
     if(headings.length<cfg.tocMin)return;
     var used=new Set(),details=doc.createElement('details'),summary=doc.createElement('summary'),list=doc.createElement('ol');
