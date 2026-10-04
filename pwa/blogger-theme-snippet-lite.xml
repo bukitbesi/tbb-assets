@@ -1,0 +1,16 @@
+<!-- PWA Lite: Namecheap + Blogger, tanpa Service Worker atau Cloudflare proxy. -->
+<!-- REPLACE existing apple-touch-icon and theme-color entries, then ADD before </head>. -->
+<link crossorigin='anonymous' href='https://assets.thebukitbesi.com/pwa/manifest.webmanifest' rel='manifest'/>
+<link href='https://assets.thebukitbesi.com/pwa/icons/tbb-icon-192.png' rel='icon' sizes='192x192' type='image/png'/>
+<link href='https://assets.thebukitbesi.com/pwa/icons/tbb-icon-512.png' rel='icon' sizes='512x512' type='image/png'/>
+<link href='https://assets.thebukitbesi.com/pwa/icons/tbb-icon-192.png' rel='apple-touch-icon'/>
+<meta content='#e11d48' name='theme-color'/>
+<meta content='The Bukit Besi' name='application-name'/>
+<meta content='yes' name='mobile-web-app-capable'/>
+<meta content='yes' name='apple-mobile-web-app-capable'/>
+<meta content='The Bukit Besi' name='apple-mobile-web-app-title'/>
+<link href='https://assets.thebukitbesi.com/pwa/tbb-pwa.min.css' rel='stylesheet'/>
+
+<!-- ADD immediately before </body>. Empty serviceWorker intentionally disables registration. -->
+<script>/*<![CDATA[*/window.TBB_PWA={serviceWorker:'',prefetch:true};/*]]>*/</script>
+<script defer='defer' src='https://assets.thebukitbesi.com/pwa/tbb-pwa.min.js'></script>

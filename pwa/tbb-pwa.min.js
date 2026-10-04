@@ -41,9 +41,20 @@
   }
 
   function install(){
+    if(win.matchMedia('(display-mode: standalone)').matches||win.navigator.standalone)return;
     var promptEvent=null,button=doc.createElement('button');button.type='button';button.className='tbb-install';button.textContent='Pasang aplikasi';button.setAttribute('aria-label','Pasang aplikasi The Bukit Besi');doc.body.appendChild(button);
+    try{var visits=parseInt(localStorage.getItem('tbb-pwa-visits')||'0',10)+1;localStorage.setItem('tbb-pwa-visits',String(Math.min(visits,9)));if(visits>1)button.dataset.ready='true'}catch(_){button.dataset.ready='true'}
     win.addEventListener('beforeinstallprompt',function(e){e.preventDefault();promptEvent=e;button.dataset.ready='true'});
-    button.addEventListener('click',async function(){if(!promptEvent)return;button.dataset.ready='false';await promptEvent.prompt();await promptEvent.userChoice;promptEvent=null});
+    function guide(){
+      var old=doc.querySelector('.tbb-install-guide');if(old)old.remove();
+      var wrap=doc.createElement('div'),box=doc.createElement('div'),title=doc.createElement('strong'),text=doc.createElement('p'),close=doc.createElement('button');
+      wrap.className='tbb-install-guide';wrap.setAttribute('role','dialog');wrap.setAttribute('aria-modal','true');wrap.setAttribute('aria-labelledby','tbb-install-title');
+      box.className='tbb-install-guide__box';title.id='tbb-install-title';title.textContent='Tambah The Bukit Besi ke skrin utama';
+      var ios=/iPad|iPhone|iPod/.test(navigator.userAgent);text.textContent=ios?'Tekan Share, kemudian pilih Add to Home Screen.':'Buka menu pelayar (⋮), kemudian pilih Pasang aplikasi atau Tambah ke skrin utama.';
+      close.type='button';close.textContent='Tutup';close.addEventListener('click',function(){wrap.remove();button.focus()});wrap.addEventListener('click',function(e){if(e.target===wrap)close.click()});
+      box.append(title,text,close);wrap.appendChild(box);doc.body.appendChild(wrap);close.focus();
+    }
+    button.addEventListener('click',async function(){if(!promptEvent){guide();return}button.dataset.ready='false';await promptEvent.prompt();await promptEvent.userChoice;promptEvent=null});
     win.addEventListener('appinstalled',function(){button.remove()});
   }
 
@@ -58,7 +69,7 @@
   }
 
   function registerSW(){
-    if(!('serviceWorker' in navigator)||location.protocol!=='https:')return;
+    if(!cfg.serviceWorker||!('serviceWorker' in navigator)||location.protocol!=='https:')return;
     win.addEventListener('load',function(){navigator.serviceWorker.register(cfg.serviceWorker,{scope:'/',updateViaCache:'none'}).catch(function(err){if(win.console)console.info('[TBB PWA] Service Worker belum tersedia pada origin utama.',err.message)})},{once:true});
   }
 

@@ -1,12 +1,12 @@
 {
-  "id": "/",
+  "id": "https://www.thebukitbesi.com/",
   "name": "The Bukit Besi",
   "short_name": "Bukit Besi",
   "description": "Panduan, direktori, tutorial dan maklumat berguna untuk pembaca Malaysia.",
   "lang": "ms-MY",
   "dir": "ltr",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "https://www.thebukitbesi.com/",
+  "scope": "https://www.thebukitbesi.com/",
   "display": "standalone",
   "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
   "orientation": "any",
@@ -43,12 +43,12 @@
     {
       "name": "Cari artikel",
       "short_name": "Cari",
-      "url": "/search"
+      "url": "https://www.thebukitbesi.com/search"
     },
     {
       "name": "Artikel terkini",
       "short_name": "Terkini",
-      "url": "/"
+      "url": "https://www.thebukitbesi.com/"
     }
   ]
 }

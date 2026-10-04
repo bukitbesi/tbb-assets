@@ -4,6 +4,10 @@
 
 The files in this package are production-ready and dependency-free. Static files may live at `assets.thebukitbesi.com`, but a Service Worker that controls `www.thebukitbesi.com` must be returned from the `www.thebukitbesi.com` origin. A cross-origin Service Worker cannot control Blogger pages.
 
+## Recommended Blogger mode: PWA Lite
+
+When Cloudflare proxying causes Blogger redirect problems, use `blogger-theme-snippet-lite.xml`. This leaves DNS and Blogger routing unchanged. It provides the cross-origin manifest, install guidance, TOC, reading progress, network status and safe prefetching. Custom offline cache and web push remain disabled.
+
 ## 1. Upload static assets
 
 Publish the package contents under:
